@@ -48,7 +48,6 @@ def generate_device_map(model, num_processes: int = 1, no_split_module_classes=N
 
 def find_pippy_batch_size(args, kwargs):
     found_batch_size = None
-    if args is not None:
         for arg in args:
             found_batch_size = ignorant_find_batch_size(arg)
             if found_batch_size is not None:
